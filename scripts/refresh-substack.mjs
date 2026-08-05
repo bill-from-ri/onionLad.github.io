@@ -277,8 +277,10 @@ for (const src of sources) {
 }
 
 if (!posts) {
-  console.error("All sources failed; refusing to overwrite posts.json");
-  process.exit(1);
+  // Exit 0: a failed refresh is harmless (posts.json keeps its last good
+  // state and the next scheduled run retries), so don't fail the workflow.
+  console.error("All sources failed; leaving posts.json untouched");
+  process.exit(0);
 }
 
 await writeFile(OUT_PATH, JSON.stringify(posts, null, 2) + "\n");
