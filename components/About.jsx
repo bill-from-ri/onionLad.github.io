@@ -1,10 +1,10 @@
 // About — bio + Live Telemetry card
 function About() {
   const telemetry = [
-    { label: "Reading", value: "The Secret History", sub: "Donna Tartt" },
+    { label: "Reading", value: "Genghis Khan", sub: "Frank McLynn" },
     { label: "Bouldering", value: "V4-V5", sub: "CRG North Station" },
-    { label: "Listening", value: "Alligator Bites Never Heal", sub: "Doechii" },
-    { label: "Gaming", value: "Crusader Kings 3", sub: "Paradox Interactive" },
+    { label: "Listening", value: "Whatever the algorithm gives me", sub: "Anyone" },
+    { label: "Gaming", value: "Expedition 33", sub: "Sandfall Interactive" },
   ];
 
   return (
@@ -30,12 +30,11 @@ function About() {
             <p>
               My work is centered around natural language processing — AI agents,
               information retrieval, source grounding, and structured data extraction. 
-              In my spare time, I've been writing on Substack about the application of language
-              models and other computational methods to epidemiology.
             </p>
             <p>
               When I'm not working on agents, I'm usually climbing,
-              reading, or playing grand strategy games.
+              reading, or playing strategy games. When I find time,
+              I also like to write and draw.
             </p>
           </div>
         </div>

@@ -7,7 +7,7 @@ function Writing() {
       year: "coming soon",
       title: "The Zhusan Cycle",
       genre: "Fantasy",
-      blurb: "The children of a dying empire must settle ancient feuds and uncover lost secrets to break the cycle of Fate.",
+      blurb: "As the realm fractures, four heroes must either restore the Empire's glory or tear it down themselves.",
       domain: "substack.com",
       link: "https://zhusancycle.substack.com/",
       tintFrom: "#2A1F1A",

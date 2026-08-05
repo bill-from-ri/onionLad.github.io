@@ -55,12 +55,12 @@ function Hero() {
         </div>
         <p className="hero-blurb">
           Founding Applied AI Engineer at <a href="https://mavenbio.com/" target="_blank" rel="noreferrer">Maven Bio</a>.
-          Working on agentic AI systems, bioNLP, and short stories on the side.
+          Building agentic systems, data pipelines, and business intelligence tools.
         </p>
         <div className="hero-meta">
           <div className="meta-col">
             <div className="meta-label">Currently</div>
-            <div className="meta-val">Maven Bio · Boston</div>
+            <div className="meta-val">Maven Bio</div>
           </div>
           <div className="meta-col">
             <div className="meta-label">Previously</div>
@@ -68,7 +68,7 @@ function Hero() {
           </div>
           <div className="meta-col">
             <div className="meta-label">After-Hours</div>
-            <div className="meta-val">Climbing · Writing · CK3</div>
+            <div className="meta-val">Climbing · Writing · Gaming</div>
           </div>
         </div>
       </div>

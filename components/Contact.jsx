@@ -43,7 +43,7 @@ function Contact() {
 
         <footer className="site-foot">
           <div>© William Xia · {new Date().getFullYear()}</div>
-          <div className="mono">Last Updated June 2026 · ver 2.0</div>
+          <div className="mono">Last Updated August 2026 · ver 2.0</div>
         </footer>
       </div>
     </section>
