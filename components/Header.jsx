@@ -2,6 +2,14 @@
 function Header() {
   const [shrunk, setShrunk] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [theme, setTheme] = useState(() => {
+    try {
+      const t = localStorage.getItem("theme");
+      return t === "light" || t === "dark" ? t : "auto";
+    } catch (e) {
+      return "auto";
+    }
+  });
 
   useEffect(() => {
     const onScroll = () => setShrunk(window.scrollY > 80);
@@ -9,6 +17,19 @@ function Header() {
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const cycleTheme = () => {
+    const next = theme === "auto" ? "light" : theme === "light" ? "dark" : "auto";
+    const root = document.documentElement;
+    if (next === "auto") {
+      root.removeAttribute("data-theme");
+      try { localStorage.removeItem("theme"); } catch (e) {}
+    } else {
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("theme", next); } catch (e) {}
+    }
+    setTheme(next);
+  };
 
   const copyEmail = () => {
     navigator.clipboard?.writeText("bxia@mavenbio.io");
@@ -46,6 +67,25 @@ function Header() {
             <path d="M3.5 6 12 13l8.5-7"/>
           </svg>
           <span className={"hs-tip " + (copied ? "on" : "")}>{copied ? "copied" : "copy email"}</span>
+        </button>
+        <button className="hs-btn" onClick={cycleTheme} aria-label={"Theme: " + (theme === "auto" ? "system" : theme)}>
+          {theme === "auto" && (
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden>
+              <rect x="3" y="4" width="18" height="13" rx="1.5"/>
+              <path d="M9 21h6M12 17v4"/>
+            </svg>
+          )}
+          {theme === "light" && (
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" aria-hidden>
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/>
+            </svg>
+          )}
+          {theme === "dark" && (
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" aria-hidden>
+              <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>
+            </svg>
+          )}
         </button>
       </div>
     </header>

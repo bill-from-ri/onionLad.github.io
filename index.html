@@ -73,23 +73,6 @@ function App() {
     }
   }, []);
 
-  useEffect(() => {
-    const onKey = (e) => {
-      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
-        e.preventDefault();
-        const root = document.documentElement;
-        const current = root.getAttribute("data-theme");
-        const osDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        const effective = current || (osDark ? "dark" : "light");
-        const next = effective === "dark" ? "light" : "dark";
-        root.setAttribute("data-theme", next);
-        try { localStorage.setItem("theme", next); } catch (err) {}
-      }
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, []);
-
   return (
     <>
       {settings.intro && !introDone && <Intro />}
