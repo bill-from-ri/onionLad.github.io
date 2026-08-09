@@ -59,7 +59,7 @@ function About() {
           <div className="doc-cta">
             <a
               className="doc-btn"
-              href="docs/CVs/Resume%2025_8_7.pdf"
+              href="docs/CVs/Resume%2026_8_4.pdf"
               target="_blank"
               rel="noreferrer"
             >
