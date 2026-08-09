@@ -3,7 +3,7 @@ function About() {
   const telemetry = [
     { label: "Reading", value: "Genghis Khan", sub: "Frank McLynn" },
     { label: "Bouldering", value: "V4-V5", sub: "CRG North Station" },
-    { label: "Listening", value: "Whatever the algorithm gives me", sub: "Anyone" },
+    { label: "Listening", value: "The Attractions of Youth", sub: "Barns Courtney" },
     { label: "Gaming", value: "Expedition 33", sub: "Sandfall Interactive" },
   ];
 
@@ -64,15 +64,6 @@ function About() {
               rel="noreferrer"
             >
               <span className="doc-btn-label">Resume</span>
-              <span className="doc-btn-arrow" aria-hidden="true">↗</span>
-            </a>
-            <a
-              className="doc-btn"
-              href="docs/CVs/William%20Xia%20CV%20-%20August%208%2C%202025.pdf"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span className="doc-btn-label">CV</span>
               <span className="doc-btn-arrow" aria-hidden="true">↗</span>
             </a>
           </div>

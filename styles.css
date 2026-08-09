@@ -449,16 +449,17 @@ section {
   box-shadow: var(--shadow-md);
 }
 
-/* Resume / CV buttons */
+/* Resume button */
 .doc-cta {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 12px;
 }
 .doc-btn {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 10px;
   padding: 14px 18px;
   background: var(--panel);
@@ -477,6 +478,8 @@ section {
   text-transform: uppercase;
 }
 .doc-btn-arrow {
+  position: absolute;
+  right: 18px;
   font-family: var(--serif);
   font-size: 16px;
   color: var(--ink-3);
